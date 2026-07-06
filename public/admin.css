@@ -1,0 +1,51 @@
+.admin-login {
+  max-width: 320px;
+  margin: 120px auto;
+  padding: 30px;
+  background: var(--bg-raised);
+  border-radius: var(--radius);
+  text-align: center;
+}
+.admin-login input {
+  width: 100%;
+  padding: 10px 12px;
+  margin: 14px 0;
+  border-radius: 8px;
+  border: 1px solid rgba(255,255,255,0.1);
+  background: var(--bg);
+  color: var(--cream);
+}
+.error { color: var(--garnet); font-size: 0.85rem; }
+.hidden { display: none; }
+
+.admin-dashboard { max-width: 1000px; margin: 0 auto 60px; }
+.admin-dashboard .topbar a { color: var(--muted); text-decoration: none; font-size: 0.85rem; }
+
+.admin-section { padding: 24px 28px; border-bottom: 1px solid rgba(255,255,255,0.06); }
+.admin-section h3 { color: var(--gold-bright); margin-bottom: 14px; }
+
+.upload-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 18px;
+}
+.upload-slot {
+  background: var(--bg-raised);
+  border-radius: 10px;
+  padding: 12px;
+  text-align: center;
+}
+.upload-slot p { font-size: 0.85rem; color: var(--muted); margin: 0 0 8px; }
+.upload-slot .preview {
+  width: 100%;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  border-radius: 8px;
+  background: var(--bg);
+  margin-bottom: 8px;
+}
+.upload-slot input[type="file"] { font-size: 0.75rem; color: var(--muted); width: 100%; }
+
+.orders-table { width: 100%; border-collapse: collapse; font-size: 0.9rem; }
+.orders-table th, .orders-table td { text-align: left; padding: 8px 10px; border-bottom: 1px solid rgba(255,255,255,0.06); }
+.orders-table th { color: var(--muted); font-weight: 500; }

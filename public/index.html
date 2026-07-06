@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="km">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>MRX TOPUP — បញ្ចូលលុយហ្គេម លឿន សុវត្ថិភាព</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700&family=Kantumruy+Pro:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="brand">
+    <img id="siteLogo" src="" alt="logo" class="brand-logo" />
+    <span class="brand-name">MRX <em>TOPUP</em></span>
+  </div>
+  <a class="admin-link" href="/admin.html">Admin</a>
+</header>
+
+<section class="hero">
+  <div class="hero-text">
+    <p class="eyebrow">KHQR • BAKONG • AUTO DELIVERY</p>
+    <h1 id="siteTagline">បញ្ចូលលុយហ្គេម លឿន សុវត្ថិភាព តម្លៃដូនតា</h1>
+    <p class="hero-sub">ស្កេន KHQR ម្តង ប្រព័ន្ធបញ្ចូលដោយស្វ័យប្រវត្តិភ្លាមៗ — មិនចាំបាច់រង់ចាំ admin។</p>
+  </div>
+  <img id="heroImg" class="hero-img" src="" alt="" />
+</section>
+
+<main>
+  <h2 class="section-title">ជ្រើសរើសហ្គេម</h2>
+  <div id="gameGrid" class="game-grid"></div>
+</main>
+
+<div id="orderModal" class="modal hidden">
+  <div class="modal-box">
+    <button class="modal-close" id="closeModal">✕</button>
+    <h3 id="modalGameName"></h3>
+
+    <div id="fieldInputs" class="field-inputs"></div>
+
+    <div class="ticket-grid" id="packageGrid"></div>
+
+    <button id="generateBtn" class="cta" disabled>បង្កើត KHQR</button>
+
+    <div id="qrPane" class="qr-pane hidden">
+      <div id="qrcode" class="qrcode"></div>
+      <p class="qr-amount">$<span id="qrAmount"></span></p>
+      <p class="qr-status" id="qrStatus">កំពុងរង់ចាំការទូទាត់...</p>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <p>© <span id="year"></span> MRX TOPUP. ទំនាក់ទំនងជំនួយ:
+    <a id="supportLink" href="#" target="_blank">Telegram</a>
+  </p>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+<script src="/app.js"></script>
+</body>
+</html>

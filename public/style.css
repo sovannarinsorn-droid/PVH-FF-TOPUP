@@ -1,0 +1,210 @@
+:root {
+  --bg: #0B0E14;
+  --bg-raised: #131722;
+  --cream: #F3ECDA;
+  --gold: #D9A441;
+  --gold-bright: #F2C464;
+  --garnet: #8C2F39;
+  --ink: #1B1B18;
+  --muted: #8890A0;
+  --radius: 14px;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--cream);
+  font-family: "Kantumruy Pro", "Rajdhani", sans-serif;
+  min-height: 100vh;
+}
+
+h1, h2, h3, .brand-name, .eyebrow {
+  font-family: "Chakra Petch", "Kantumruy Pro", sans-serif;
+}
+
+a { color: var(--gold-bright); }
+
+/* ---------- topbar ---------- */
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 28px;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+.brand { display: flex; align-items: center; gap: 10px; }
+.brand-logo { width: 34px; height: 34px; border-radius: 8px; object-fit: cover; background: var(--bg-raised); }
+.brand-name { font-weight: 700; font-size: 1.2rem; letter-spacing: 0.5px; }
+.brand-name em { color: var(--gold-bright); font-style: normal; }
+.admin-link {
+  font-size: 0.8rem;
+  color: var(--muted);
+  text-decoration: none;
+  border: 1px solid rgba(255,255,255,0.1);
+  padding: 6px 12px;
+  border-radius: 20px;
+}
+.admin-link:hover { color: var(--gold-bright); border-color: var(--gold); }
+
+/* ---------- hero ---------- */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+  padding: 56px 28px;
+  max-width: 1100px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+.hero-text { flex: 1 1 380px; }
+.eyebrow {
+  color: var(--gold);
+  font-weight: 600;
+  letter-spacing: 3px;
+  font-size: 0.75rem;
+  margin-bottom: 10px;
+}
+.hero h1 {
+  font-size: 2.4rem;
+  line-height: 1.25;
+  margin: 0 0 14px;
+}
+.hero-sub { color: var(--muted); font-size: 1rem; max-width: 46ch; }
+.hero-img {
+  flex: 1 1 300px;
+  max-width: 380px;
+  border-radius: var(--radius);
+  aspect-ratio: 4/3;
+  object-fit: cover;
+  background: var(--bg-raised);
+  box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+}
+
+/* ---------- games ---------- */
+.section-title {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 28px;
+  font-size: 1.3rem;
+  color: var(--gold-bright);
+}
+.game-grid {
+  max-width: 1100px;
+  margin: 20px auto 60px;
+  padding: 0 28px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 18px;
+}
+.game-card {
+  background: var(--bg-raised);
+  border-radius: var(--radius);
+  overflow: hidden;
+  cursor: pointer;
+  border: 1px solid rgba(255,255,255,0.06);
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+.game-card:hover { transform: translateY(-4px); border-color: var(--gold); }
+.game-card img { width: 100%; aspect-ratio: 1/1; object-fit: cover; display: block; }
+.game-card .name {
+  padding: 12px 14px;
+  font-weight: 600;
+  font-family: "Chakra Petch", sans-serif;
+}
+
+/* ---------- modal ---------- */
+.modal {
+  position: fixed; inset: 0;
+  background: rgba(6,7,10,0.8);
+  display: flex; align-items: center; justify-content: center;
+  padding: 20px;
+  z-index: 50;
+}
+.modal.hidden { display: none; }
+.modal-box {
+  background: var(--bg-raised);
+  border-radius: var(--radius);
+  padding: 26px;
+  max-width: 460px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+  border: 1px solid rgba(255,255,255,0.08);
+}
+.modal-close {
+  position: absolute; top: 14px; right: 14px;
+  background: none; border: none; color: var(--muted);
+  font-size: 1.1rem; cursor: pointer;
+}
+.field-inputs { display: flex; flex-direction: column; gap: 10px; margin: 16px 0; }
+.field-inputs input {
+  background: var(--bg);
+  border: 1px solid rgba(255,255,255,0.1);
+  color: var(--cream);
+  padding: 10px 12px;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-family: inherit;
+}
+
+/* ---------- ticket-style package cards (signature element) ---------- */
+.ticket-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+  gap: 14px;
+  margin: 8px 0 20px;
+}
+.ticket {
+  position: relative;
+  background: var(--cream);
+  color: var(--ink);
+  border-radius: 10px;
+  padding: 14px 10px 16px;
+  text-align: center;
+  cursor: pointer;
+  font-family: "Chakra Petch", sans-serif;
+  border: 2px solid transparent;
+  /* perforated notch top & bottom via radial gradients */
+  background-image:
+    radial-gradient(circle 6px at 0 50%, var(--bg-raised) 99%, transparent 100%),
+    radial-gradient(circle 6px at 100% 50%, var(--bg-raised) 99%, transparent 100%);
+  background-repeat: no-repeat;
+  background-position: left center, right center;
+}
+.ticket.selected { border-color: var(--gold); box-shadow: 0 0 0 3px rgba(217,164,65,0.25); }
+.ticket .label { font-weight: 700; font-size: 0.95rem; }
+.ticket .price { color: var(--garnet); font-weight: 600; margin-top: 4px; font-size: 0.85rem; }
+
+.cta {
+  width: 100%;
+  padding: 13px;
+  border: none;
+  border-radius: 10px;
+  background: var(--gold);
+  color: var(--ink);
+  font-weight: 700;
+  font-size: 1rem;
+  font-family: "Chakra Petch", sans-serif;
+  cursor: pointer;
+}
+.cta:disabled { opacity: 0.4; cursor: not-allowed; }
+.cta:not(:disabled):hover { background: var(--gold-bright); }
+
+.qr-pane { text-align: center; margin-top: 18px; }
+.qr-pane.hidden { display: none; }
+.qrcode { display: flex; justify-content: center; background: #fff; padding: 14px; border-radius: 10px; width: fit-content; margin: 0 auto; }
+.qr-amount { font-size: 1.4rem; font-weight: 700; color: var(--gold-bright); margin: 10px 0 4px; }
+.qr-status { color: var(--muted); font-size: 0.9rem; }
+.qr-status.paid { color: #5FBF7F; font-weight: 600; }
+
+footer {
+  text-align: center;
+  padding: 24px;
+  color: var(--muted);
+  font-size: 0.85rem;
+  border-top: 1px solid rgba(255,255,255,0.06);
+}

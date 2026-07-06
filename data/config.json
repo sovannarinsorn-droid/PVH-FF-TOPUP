@@ -1,0 +1,46 @@
+{
+  "site": {
+    "name": "MRX TOPUP",
+    "tagline": "បញ្ចូលលុយហ្គេម លឿន សុវត្ថិភាព តម្លៃដូនតា",
+    "logo": "/uploads/logo-default.png",
+    "hero_banner": "/uploads/hero-default.jpg",
+    "support_telegram": "https://t.me/mrxtopup_support"
+  },
+  "games": [
+    {
+      "id": "freefire",
+      "name": "Free Fire",
+      "image": "/uploads/game-freefire-default.jpg",
+      "fields": ["uid"],
+      "bay2game_code": "freefire_sgmy",
+      "packages": [
+        { "id": "ff-100", "label": "100 💎", "price": 1.0, "bay2game_product_code": "FF_100" },
+        { "id": "ff-310", "label": "310 💎", "price": 3.0, "bay2game_product_code": "FF_310" },
+        { "id": "ff-520", "label": "520 💎", "price": 5.0, "bay2game_product_code": "FF_520" },
+        { "id": "ff-weekly", "label": "Weekly Membership", "price": 1.5, "bay2game_product_code": "FF_WEEKLY" }
+      ]
+    },
+    {
+      "id": "mlbb",
+      "name": "Mobile Legends",
+      "image": "/uploads/game-mlbb-default.jpg",
+      "fields": ["uid", "server"],
+      "bay2game_code": "mlbb_exclusive",
+      "packages": [
+        { "id": "ml-100", "label": "100 💎", "price": 1.5, "bay2game_product_code": "MLBB_100" },
+        { "id": "ml-500", "label": "500 💎", "price": 7.0, "bay2game_product_code": "MLBB_500" }
+      ]
+    },
+    {
+      "id": "pubg",
+      "name": "PUBG Mobile",
+      "image": "/uploads/game-pubg-default.jpg",
+      "fields": ["uid"],
+      "bay2game_code": "pubgm",
+      "packages": [
+        { "id": "pubg-60", "label": "60 UC", "price": 1.0, "bay2game_product_code": "PUBG_60" },
+        { "id": "pubg-325", "label": "325 UC", "price": 5.0, "bay2game_product_code": "PUBG_325" }
+      ]
+    }
+  ]
+}
